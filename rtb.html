@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="background: #f4f4f4;">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>兰贵人美容抗衰会所</title>
+	<link rel="stylesheet" href="css/lgr.css">
+	<style type="text/css">
+		.mask{
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background: rgba(0,0,0,0.8);
+			display: none;
+		}
+		.tcBox{
+			width: 6.667rem;
+			height: 2.667rem;
+			background: #FFF;
+			border-radius: 0.267rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 0.467rem;
+			font-weight: 600;
+			color: #333333;
+		}
+	</style>
+	<script>
+		function refreshRem(){
+			var clientWidth = document.documentElement.clientWidth;
+			var htmlDom = document.getElementsByTagName('html')[0];
+			htmlDom.style.fontSize = clientWidth/10+'px';
+		}
+		refreshRem();
+		window.addEventListener('resize',function(){
+			refreshRem();
+		},false)
+	</script>
+</head>
+<body>
+	<div class="container" style="background: #f4f4f4;">
+        <div class="banner"></div>
+		<div class="content_box">
+			<div class="rtb_title disb">
+				<div class="title diss">兰贵人美容抗衰会所! 狂欢优惠节！</div>
+				<div class="price disc">￥88.00</div>
+			</div>
+			<div class="tips_box disc">请填写您的手机号和姓名，凭手机号及姓名进店体验 项目、领取礼品，绝无任何隐行形消费。</div>
+			<div class="input_box">
+				<div class="input_item diss">
+					<label>姓名:</label>
+					<input type="text" name="userName" placeholder="请输入姓名">
+				</div>
+				<div class="input_item diss">
+					<label>电话:</label>
+					<input type="text" name="userPhone" placeholder="请输入电话">
+				</div>
+				<input type="hidden" name="rtb" value="1" />
+			</div>
+			<div class="submission_box">
+				<button class="submission_btn">提交订单</button>
+			</div>
+			<div class="notes_box" style="background: transparent;">
+				<div class="notes_title diss" style="border-bottom: 1px solid transparent;"><span></span>购买须知</div>
+				<div class="rule" style="border-bottom: 1px solid transparent;padding: 0 0.4rem;">
+					<p style="font-weight: 400; color: #000;">1.本次活动不含任何隐形消费</p>
+					<p style="font-weight: 400; color: #000;">2.本次活动仅限女性朋友参加</p>
+				</div>
+			</div>
+		</div>
+    </div>
+	<div class="mask">
+    	<div class="tcBox">
+    		<span>预购成功</span>
+    	</div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	(function(window){
+		$('.submission_btn').on('click',function(){
+			var userName=$(" input[ name='userName' ] ").val()
+			var userPhone=$(" input[ name='userPhone' ] ").val()
+			var mobilereg1 = /^1[3|5|6|7|8|9][0-9]{9}$/;// 1[356789][0-9] （后面再接8位数）
+			var mobilereg2 = /^14[5|7][0-9]{8}$/; // 14[57] （后面再接8位数）
+			if (!userName) {
+	            alert('请填写姓名');
+	            return;
+	        } 
+			if (!userPhone) {
+	            alert('请填写手机号码');
+	            return;
+	        } else if (!mobilereg1.test(userPhone) && !mobilereg2.test(userPhone)) {
+	            alert('请填写正确的手机号码');
+	            return;
+	        }
+			// alert(userName);
+			// alert(userPhone);
+			// alert(rtb);
+			
+			$.ajax({
+				url:'http://lgr.ckugua.com:8080/fenxiao/user/add',
+				type:'POST',
+				dataType: "json",
+				data:{
+					name:userName,
+					phone:userPhone,
+				},
+				success:function(res){
+					console.log(res)
+					$('.mask').show();
+				}
+			})
+		})
+		$('.mask').on('click',function(){
+			$(this).hidden();
+		})
+	})(this)
+</script>
+</html>

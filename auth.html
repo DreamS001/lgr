@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/lgr.css">
+	<title>兰贵人美容抗衰会所</title>
+	<script>
+		function refreshRem(){
+			var clientWidth = document.documentElement.clientWidth;
+			var htmlDom = document.getElementsByTagName('html')[0];
+			htmlDom.style.fontSize = clientWidth/10+'px';
+		}
+		refreshRem();
+		window.addEventListener('resize',function(){
+			refreshRem();
+		},false)
+	</script>
+	<style type="text/css">
+		.container{
+			padding: 2.0rem 0.533rem 0.667rem;
+		}
+		.logo_box{
+			width: 100%;
+			height: 4.667rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border-bottom: 1px solid #ccc;
+		}
+		.logo_box .logo_img{
+			width: 1.333rem;
+			height: 1.333rem;
+			border-radius: 50%;
+			margin-bottom: 0.4rem;
+		}
+		.logo_box p{
+			font-size: 0.467rem;
+			font-weight: 700;
+			color: #000000;
+		}
+		.bottom_box{
+			width: 100%;
+			height: 2.667rem;
+			margin: 0.8rem 0;
+		}
+		.bottom_box p{
+			font-size: 0.467rem;
+			font-weight: 600;
+			color: #000;
+			line-height: 0.933rem;
+		}
+		.bottom_box .info{
+			font-size: 0.4rem;
+			color: #797979;
+		}
+		.login_btn{
+			width: 100%;
+			height:1.333rem;
+			background: #54b7ca;
+			border: none;
+			outline: none;
+			border-radius: 5px;
+			font-size: 0.4rem;
+			color: #FFF;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+       <div class="logo_box">
+       		<img src="images/user.png" class="logo_img">
+       		<p>兰贵人美容抗衰会所</p>
+       </div>
+       <div class="bottom_box">
+       	<p>网页由该公众号开发,请确认授权以下信息</p>
+       	<p class="info">获的你的公开信息(昵称、头像等)</p>
+       </div>
+       <button class="login_btn">确认登录</button>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$.ajax({
+		url:'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxeb9096b4e805d685&redirect_uri=(授权网页的路径)&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'
+	})
+</script>
+</html>

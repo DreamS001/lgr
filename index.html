@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>兰贵人美容抗衰会所</title>
+    <link rel="stylesheet" href="css/lgr.css">
+    <script>
+		function refreshRem(){
+			var clientWidth = document.documentElement.clientWidth;
+			var htmlDom = document.getElementsByTagName('html')[0];
+			htmlDom.style.fontSize = clientWidth/10+'px';
+		}
+		refreshRem();
+		window.addEventListener('resize',function(){
+			refreshRem();
+		},false)
+	</script>
+</head>
+<body>
+    <div class="container">
+        <div class="banner"></div>
+		<div class="content_box">
+			<div class="title_box">
+				<div class="title diss">兰贵人美容抗衰会所! 狂欢优惠节！</div>
+				<div class="price_box">
+					<div class="price disb">
+						<div class="date_end">截止：2018年9月6日</div>
+						<div class="rtb disb">
+							<div class="rmb_price">￥88.00</div>
+							<button class="rtb_btn disc">抢购</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="line"></div>
+			<div class="purchaserecord">
+				<div class="record disb">
+					<div class="re_word diss">购买记录</div>
+					<div class="point_btn dise">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<div class="purchaser_info">
+					<ul style="list-style: none;" id="rtbBox">
+						
+					<ul>
+				</div>
+			</div>
+			<div class="line"></div>
+			<div class="activity_box">
+				<div class="activity_title diss">活动介绍</div>
+				<div class="activity_img_box">
+					<img src="images/1.png" class="activity_img">
+					<img src="images/2.png" class="activity_img">
+					<img src="images/3.png" class="activity_img">
+					<img src="images/4.png" class="activity_img">
+					<img src="images/5.png" class="activity_img">
+				</div>
+			</div>
+			<div class="notes_box" id="record">
+				<div class="notes_title diss">购买须知</div>
+				<div class="rule">
+					<p>1.本次活动不含任何隐形消费</p>
+					<p>2.本次活动仅限女性朋友参加</p>
+				</div>
+				<div class="rule_box">
+					<p>本活动由 兰贵人美容抗衰会所发起</p>
+					<p>客服热线：15888919988</p>
+					<p>领取地址：永康市南苑东路59号10楼</p>
+					<p>领取时间：2018年9月16日前</p>
+				</div>
+			</div>
+			<div class="purch_info_box" style="background: #e792af;">
+				<div class="purch_info_title disb">
+					<span>购买记录</span>
+					<div class="total dise">
+						
+					</div>
+				</div>
+				<div class="user_info_box">
+					<table>
+						<thead>
+							<tr>
+								<th>姓名</th>
+								<th>手机号</th>
+								<th>购买状态</th>
+							</tr>
+						</thead>
+						<tbody id="bottomBox">
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<footer class="footer disb">
+			<button class="btn active_btn disc" style="color: #00bbcc;">活动秘籍</button>
+			<button class="btn disc gobuy" style="background: #00bbcc;">抢购</button>
+		</footer>
+        <div class="tips">本活动由 兰贵人美容抗衰会所 发起</div>
+    </div>
+    <div class="lay_box">
+    	<div class="lay_box_tips">
+    		<div class="tips_img diss">
+    			<img src="images/tips.png">
+    			<span>温馨提示</span>
+    		</div>
+    		<div class="tips_content">
+    			<div class="title_top">本活动由 兰贵人美容抗衰会所 发起</div>
+    			<div class="content_box">
+    				<span>电话：15888919988</span>
+    				<span>地址：永康市南苑东路59号10楼</span>
+    			</div>
+    		</div>
+    		<button class="ok_btn">我知道了</button>
+    	</div>
+    </div>
+    <div class="kf_right_box">
+    	<div class="public_box kf_box">
+    		<img src="images/kf.png">
+    	</div>
+    	<div class="public_box record_box">
+    		<img src="images/toc.png">
+    	</div>
+    	<div class="public_box rtb_box">
+    		<a href="#record">
+    			<img src="images/record.png">
+    		</a>
+    	</div>
+    </div>
+    <div class="tel_box">
+    	<div class="tel">
+    		<div class="tel_title">提示</div>
+    		<div class="tel_content">你确定要拨打15888919988吗?</div>
+    		<div class="tel_btn disb">
+    			<button class="cos">取消</button>
+    			<button class="ok">
+    				<a href="tel:15888919988">确定</a>
+    			</button>
+    		</div>
+    	</div>
+    </div>
+</body>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/recordRoll.js"></script>
+<script type="text/javascript" src="js/template-web.js"></script>
+<!-- <script type="text/javascript" src="js/getCode.js"></script> -->
+<script type="text/template" id="rtbTpl">
+	{{each list value index}}
+		<li class="purchaser_info_item disb">
+			<div class="box left_box diss">
+				<img src="images/user.png" class="user_img">
+				<div class="user_word">
+					<span>{{value.payName}}</span>
+					<span class="tel">{{(value.payPhone).replace(/^(\d{4})\d{4}(\d+)/,"$1****$2")}}</span>
+				</div>
+			</div>
+			<div class="box right_box">
+				<p>{{value.payTime}}</p>
+			</div>
+		</li>
+	{{/each}}
+</script>
+<script type="text/template" id="bottomTpl">
+	{{each list value index}}
+		<tr>
+			<td>{{(value.payName).replace(/.(?=.)/g, '*')}}</td>
+			<td>{{(value.payPhone).replace(/^(\d{4})\d{4}(\d+)/,"$1****$2")}}</td>
+			<td>已购买</td>
+		</tr>
+	{{/each}}
+</script>
+<script type="text/javascript">
+	
+(function(window){
+
+
+
+
+	// var needRedirect = login();
+	// if (needRedirect) {
+	// 	console.log('已授权')
+	// 	return;
+	// }
+	var layBox=function(){
+		$('.lay_box').show();
+	}
+	if(document.cookie.indexOf("exec=1")==-1){
+		layBox();//执行执行点击按钮
+		document.cookie="exec=1";//内存cookie，浏览器重启前只会执行一次，如果你要再指定时间内都执行，自己增加expires设置有效时间
+	}
+
+	$('.ok_btn').on('click',function(){
+		$('.lay_box').hide();
+	})
+	
+	var test = window.location.href;
+	var url=location.href.split('#')[0];
+
+
+	// $.ajax({
+	// 	type: "POST",
+	//     url: "./jsSDKDoor",
+	//     data: {
+	//     	"url": url
+	//     },
+	//     dataType: "json",
+	//     async:false,
+	//     success: function (data) {
+	//         wx.config({
+	//            debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+	//            appId: data.appId, // 必填，公众号的唯一标识
+	//            timestamp: data.timestamp, // 必填，生成签名的时间戳
+	//            nonceStr: data.nonceStr, // 必填，生成签名的随机串
+	//            signature: data.signature,// 必填，签名，见附录1
+	//            jsApiList: [
+	// 				'onMenuShareTimeline',
+	// 				'onMenuShareAppMessage',
+	// 				'onMenuShareQQ',
+	// 				'onMenuShareWeibo',
+	// 				'onMenuShareQZone',
+	//       	   ] // 必填，需要使用的JS接口列表
+	//         });
+	//     }
+	// });
+
+
+	wx.ready(function(){
+	// wx.checkJsApi1 判断当前版本是否支持指定 JS 接口，支持批量判断
+	 wx.checkJsApi({
+	     jsApiList: [
+	       'onMenuShareTimeline',
+	       'onMenuShareAppMessage',
+	       'onMenuShareQQ',
+	       'onMenuShareWeibo',
+	       'onMenuShareQZone',
+	     ],
+	     success: function (res) {
+	       alert(JSON.stringify(res)+"支持JS SDK接口");
+	     }
+	   });
+	 wx.onMenuShareTimeline({
+	     title: '互联网之子',
+	     desc: '在长大的过程中，我才慢慢发现，我身边的所有事，别人跟我说的所有事，那些所谓本来如此，注定如此的事，它们其实没有非得如此，事情是可以改变的。更重要的是，有些事既然错了，那就该做出改变。',
+	     link: 'http://movie.douban.com/subject/25785114/',
+	     imgUrl: 'http://demo.open.weixin.qq.com/jssdk/images/p2166127561.jpg',
+	     trigger: function (res) {
+	       // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
+	       alert('用户点击发送给朋友圈111');
+	     },
+	     success: function (res) {
+	       alert('已分享11');
+	     },
+	     cancel: function (res) {
+	       alert('已取消11');
+	     },
+	     fail: function (res) {
+	       alert(JSON.stringify(res));
+	     }
+	   });
+	 wx.onMenuShareAppMessage({
+	 title: '12211', // 分享标题
+	 desc: '11', // 分享描述
+	 link: '1', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+	 imgUrl: 'http://demo.open.weixin.qq.com/jssdk/images/p2166127561.jpg', // 分享图标
+	 type: 'video', // 分享类型,music、video或link，不填默认为link
+	 dataUrl: 'http://bf0d6df4.ngrok.io/1.flv', // 如果type是music或video，则要提供数据链接，默认为空
+	 trigger: function (res) {
+	       // 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
+	       alert('用户点击发送给朋友111');
+	     },
+	     success: function (res) {
+	       alert('已分享11');
+	     },
+	     cancel: function (res) {
+	       alert('已取消11');
+	     },
+	     fail: function (res) {
+	       alert(JSON.stringify(res));
+	     }
+	 });
+	 
+	// 2.3 监听“分享到QQ”按钮点击、自定义分享内容及分享结果接口
+	 $('#onMenuShareQQ').click(function () {
+	   wx.onMenuShareQQ({
+	     title: '互联网之子',
+	     desc: '在长大的过程中，我才慢慢发现，我身边的所有事，别人跟我说的所有事，那些所谓本来如此，注定如此的事，它们其实没有非得如此，事情是可以改变的。更重要的是，有些事既然错了，那就该做出改变。',
+	     link: 'http://movie.douban.com/subject/25785114/',
+	     imgUrl: 'http://img3.douban.com/view/movie_poster_cover/spst/public/p2166127561.jpg',
+	     trigger: function (res) {
+	       alert('用户点击分享到QQ');
+	     },
+	     complete: function (res) {
+	       alert(JSON.stringify(res));
+	     },
+	     success: function (res) {
+	       alert('已分享');
+	     },
+	     cancel: function (res) {
+	       alert('已取消');
+	     },
+	     fail: function (res) {
+	       alert(JSON.stringify(res));
+	     }
+	   });
+	   alert('已注册获取“分享到 QQ”状态事件');
+	 });
+	 // 2.4 监听“分享到微博”按钮点击、自定义分享内容及分享结果接口
+	 $('#onMenuShareWeibo').click(function () {
+	   wx.onMenuShareWeibo({
+	     title: '互联网之子',
+	     desc: '在长大的过程中，我才慢慢发现，我身边的所有事，别人跟我说的所有事，那些所谓本来如此，注定如此的事，它们其实没有非得如此，事情是可以改变的。更重要的是，有些事既然错了，那就该做出改变。',
+	     link: 'http://movie.douban.com/subject/25785114/',
+	     imgUrl: 'http://img3.douban.com/view/movie_poster_cover/spst/public/p2166127561.jpg',
+	     trigger: function (res) {
+	       alert('用户点击分享到微博');
+	     },
+	     complete: function (res) {
+	       alert(JSON.stringify(res));
+	     },
+	     success: function (res) {
+	       alert('已分享');
+	     },
+	     cancel: function (res) {
+	       alert('已取消');
+	     },
+	     fail: function (res) {
+	       alert(JSON.stringify(res));
+	     }
+	   });
+	   alert('已注册获取“分享到微博”状态事件');
+	 });
+
+	}); 
+
+	// $(".purchaser_info ul").RollTitle({line:1,speed:500,timespan:1500});
+	setInterval(function(){  // 添加定时器，每1.5s进行转换
+        $(".purchaser_info").find("ul:first").animate({
+                marginTop:"-60px"  //每次移动的距离
+        },500,function(){   // 动画运动的时间
+                //$(this)指的是ul对象，
+                //ul复位之后把第一个元素和第二个元素插入
+                //到ul的最后一个元素的位置
+                $(this).css({marginTop:"0px"}).find(".purchaser_info_item:first").appendTo(this);
+                $(this).find(".purchaser_info_item:first").appendTo(this);
+        });
+    },1500)
+    var rtbFun=function(){
+    	$.ajax({
+	    	url:'http://lgr.ckugua.com:8080/fenxiao/pay/list',
+	    	type:'GET',
+	    	dataType:'json',
+	    	success:function(res){
+	    		console.log(res)
+    			var total="<span>总计："+res.count+"人</span>";
+    			$('.total').html(total)
+	    		if(res.rtnCode==1){
+	    			var html=template('rtbTpl',{list:res.pays});
+	    			$('#rtbBox').html(html)
+	    			var content=template('bottomTpl',{list:res.pays});
+	    			$('#bottomBox').html(content)
+	    		}
+	    	}
+	    })
+    }
+	
+    rtbFun();
+	//记录
+    $('.point_btn,.record_box').on('click',function(){
+    	console.log('77777')
+    	location.href='record.html';
+    })
+    //抢购
+    $('.rtb_btn,.gobuy').on('click',function(){
+    	location.href='rtb.html'
+    })
+	$('.active_btn').on('click',function(){
+		location.href='active.html'
+	})
+	//点击客服
+	$('.kf_box').on('click',function(){
+		$('.tel_box').show();
+	})
+	//点击取消
+	$('.cos').on('click',function(){
+		$('.tel_box').hide();
+	})
+	
+})(this);
+</script>
+</html>
